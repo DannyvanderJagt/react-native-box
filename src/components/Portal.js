@@ -1,6 +1,12 @@
 import React, { Component } from 'react'
-import config from '../temp/config'
-import component from '../temp/component'
+
+const paths = {
+  config: path.join(process.cwd(), 'node_modules/react-native-box-cli/src/temp/config.js'),
+  component: path.join(process.cwd(), 'node_modules/react-native-box-cli/src/temp/component.js'),
+}
+
+const config = require(paths.config)
+const component = require(paths.component)
 
 class Portal extends Component {
   render (){
