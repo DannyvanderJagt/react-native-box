@@ -1,10 +1,6 @@
 import fs from 'fs'
 import path from 'path'
 
-import pkg from '../../../package.json'
-
-console.log('Wayke cli pkg: ', pkg)
-
 const paths = {
   config: path.join(__dirname, '/temp/config.js'),
   component: path.join(__dirname, '/temp/component.js'),

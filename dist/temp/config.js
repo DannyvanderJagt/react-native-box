@@ -1,1 +1,1 @@
-Object.defineProperty(exports,"__esModule",{value:true});exports.default={"type":"view"};
+export default {"name":"Badge","type":"component"}

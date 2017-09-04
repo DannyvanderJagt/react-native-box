@@ -1,30 +1,37 @@
 #!/usr/bin/env node
 import commander from 'commander'
 import color from 'cli-color'
-import pkg from '../package.json'
 import api from './api'
+import boxPkg from '../package.json'
+
+// Get config from client the package.json file
+let pkg = require(`${process.cwd()}/package.json`)
+let config = pkg.box
+
+config.name = config.name || 'Box'
+config.color = config.color || 'magenta'
 
 commander
-  .version(pkg.version)
+  .version(boxPkg.version)
 
 commander
   .command('dc <name>')
   .action((name) => {
-    console.log(`${color.magenta(`[Wayke]`)} Hot drop-in component: %s`, name)
+    console.log(`${color[config.color](`[${config.name}]`)} Hot drop-in component: %s`, name)
     api.dropInComponent(name)
   })
 
 commander
   .command('dv <type> <name>')
   .action((type, name) => {
-    console.log(`${color.magenta(`[Wayke]`)} Hot drop-in view: %s/%s`, type, name)
+    console.log(`${color[config.color](`[${config.name}]`)} Hot drop-in view: %s/%s`, type, name)
     api.dropInView(type, name)
   })
 
 commander
   .command('clear')
   .action(() => {
-    console.log(`${color.magenta(`[Wayke]`)} Clearing Hot drop-in`)
+    console.log(`${color[config.color](`[${config.name}]`)} Clearing Hot drop-in`)
     api.clear()
   })
 
