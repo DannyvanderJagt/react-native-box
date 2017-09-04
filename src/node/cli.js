@@ -6,8 +6,7 @@ import boxPkg from '../../package.json'
 import { exec } from 'child_process'
 
 // Get config from client the package.json file
-let pkg = require(`${process.cwd()}/package.json`)
-let config = pkg.box
+let config = require(`${process.cwd()}/box.config.js`)
 
 config.name = config.name || 'Box'
 config.color = config.color || 'magenta'
@@ -23,10 +22,10 @@ commander
   })
 
 commander
-  .command('dv <type> <name>')
-  .action((type, name) => {
-    console.log(`${color[config.color](`[${config.name}]`)} Hot drop-in view: %s/%s`, type, name)
-    api.dropInView(type, name)
+  .command('dv <name>')
+  .action((name) => {
+    console.log(`${color[config.color](`[${config.name}]`)} Hot drop-in view: %s`, name)
+    api.dropInView(name)
   })
 
 commander

@@ -5,8 +5,8 @@
   "main": "src/react/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "./node_modules/.bin/babel src/node --out-dir src/node/.build --ignore .build",
-    "build-watch": "./node_modules/.bin/babel src/node --out-dir src/node/.build -w --ignore .build"
+    "build": "./node_modules/.bin/babel src/node --out-dir src/node-dist",
+    "build-watch": "./node_modules/.bin/babel src/node --out-dir src/node-dist -w"
   },
   "author": "",
   "license": "MIT",
@@ -16,7 +16,7 @@
     "react": "^15.6.1"
   },
   "bin": {
-    "box": "src/node/.build/cli.js"
+    "box": "src/node-dist/cli.js"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
