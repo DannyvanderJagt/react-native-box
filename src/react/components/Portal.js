@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import config from '../temp/config'
-import component from '../temp/component'
+import config from '../../temp/config'
+import component from '../../temp/component'
 import Previewer from './Previewer'
 
 class Portal extends Component {
