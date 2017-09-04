@@ -3,6 +3,7 @@ import commander from 'commander'
 import color from 'cli-color'
 import api from './api'
 import boxPkg from '../package.json'
+import { exec } from 'child_process'
 
 // Get config from client the package.json file
 let pkg = require(`${process.cwd()}/package.json`)
@@ -33,6 +34,19 @@ commander
   .action(() => {
     console.log(`${color[config.color](`[${config.name}]`)} Clearing Hot drop-in`)
     api.clear()
+  })
+
+commander
+  .command('xcode')
+  .action(() => {
+    exec(`open ${process.cwd()}/ios/wayke.xcodeproj`)
+  })
+
+commander
+  .command('workspace')
+  .action(() => {
+    exec(`subl .`)
+    exec(`open ${process.cwd()}/ios/wayke.xcodeproj`)
   })
 
 commander.parse(process.argv)
