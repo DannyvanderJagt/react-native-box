@@ -4,7 +4,7 @@ import path from 'path'
 console.log('process', process.cwd())
 const paths = {
   config: path.join(process.cwd(), 'node_modules/react-native-box-cli/src/temp/config.js'),
-  component: path.join(__dirname, 'node_modules/react-native-box-cli/src/temp/component.js'),
+  component: path.join(process.cwd(), 'node_modules/react-native-box-cli/src/temp/component.js'),
   previewer: path.join(__dirname, '/components/Previewer'),
 }
 
