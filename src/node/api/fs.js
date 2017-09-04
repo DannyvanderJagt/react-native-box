@@ -8,7 +8,16 @@ export default {
 
   types: {
     'dropin.config': {
-      prepareForStorage: data => JSON.stringify(data),
+      prepareForStorage: data => `export default ${JSON.stringify(data)}`,
+    },
+    'global.config': {
+      prepareForStorage: data => `export default ${JSON.stringify(data)}`,
+    },
+    'dropin.component': {
+      prepareForStorage: path => `export { default as default } from './../../../../${path}'`,
+    },
+    'dropin.presets': {
+      prepareForStorage: path => `export { default as default } from './../../../../${path}'`,
     },
   },
 

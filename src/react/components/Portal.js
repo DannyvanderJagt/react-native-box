@@ -1,14 +1,14 @@
 import React, { Component } from 'react'
-import dropInConfig from '../../temp/config'
-import boxConfig from ''
+import Previewer from './Previewer'
+import dropInConfig from '../../temp/dropin.config'
+import dropInComponent from '../../temp/dropin.component'
 
 class Portal extends Component {
   render (){
-    const { type, name } = dropInConfig 
+    const { type } = dropInConfig 
 
     if (type == 'view') {
-      const view = require(boxConfig.views.routes[name])
-      return React.createElement(view)
+      return React.createElement(dropInComponent)
     }
 
     if(type === 'component'){

@@ -3,19 +3,21 @@ import commander from 'commander'
 import api from './api'
 
 commander
-  .command('drop-component <name>')
-  .alias('dc')
-  .action(api.dropIn.component)
+  .command('dropin-component <name>')
+  .alias('dp')
+  .action(api.dropIn.component);
 
 commander
-  .commnad('drop-view <name>')
+  .command('dropin-view <name>')
   .alias('dv')
-  .action(api.dropIn.view)
+  .action(api.dropIn.view);
 
 commander
-  .command('drop-clear')
-  .alias('dclear')
-  .command(api.dropIn.clear)
+  .command('dropin-clear')
+  .alias('clear')
+  .action(api.dropIn.view);
+
+
 
 commander
   .parse(process.argv)

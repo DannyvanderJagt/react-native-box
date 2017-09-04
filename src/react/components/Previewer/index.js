@@ -1,28 +1,33 @@
 import React, { Component } from 'react'
 import { ScrollView, View, Text } from 'react-native'
 import styles from './styles'
+import dropInConfig from '../../../temp/dropin.config'
+import globalConfig from '../../../temp/global.config.js'
+
+import Row from '../styleguide/Row'
+import Header from '../styleguide/Header'
 
 class Previewer extends Component {
-  componentDidMount(){
-    console.log('[Previewer] Did mount')
-  }
-  componentWillReceiveProps = (props) => {
-    console.log('props', props)
-  }
   render () {
-    const Comp = require('../../../temp/component').default
-    const presets = require('../../../temp/presets').default
-    const config = require('../../../temp/config').default
+    const Comp = require('../../../temp/dropin.component').default
+    const presets = require('../../../temp/dropin.presets').default
+    const config = require('../../../temp/dropin.config').default
 
     const items = Object.keys(presets).map(name => (
-      <View key={name} style={styles.row}>
+      <Row 
+        key={name}
+        presetName={name}
+        componentName={config.name}>
         <Comp preset={name}/>
-      </View>
+      </Row>
     ))
 
     return (
       <ScrollView style={{ flex: 1 }} contentContainerStyle={ styles.container }>
-        <Text>Previewer type:{config.type} name:{config.name || 'none'}</Text>
+        <Header 
+          backgroundColor={globalConfig.styleguide.primaryColor}
+          icon={globalConfig.styleguide.icon}
+          title={config.name}/>
         {items}
       </ScrollView>
     )
