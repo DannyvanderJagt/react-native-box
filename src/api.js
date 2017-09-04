@@ -20,7 +20,7 @@ const api = {
     this.setConfig({
       type: 'view',
     })
-    var relativePath = path.join(__dirname, `../../../app/${type}/scenes/${name}`)
+    var relativePath = `../../../src/app/${type}/scenes/${name}`)
     this.setComponent(relativePath)
   },
 
