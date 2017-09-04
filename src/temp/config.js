@@ -1,1 +1,1 @@
-export default {"type":"view"}
+export default {"type":"clear"}

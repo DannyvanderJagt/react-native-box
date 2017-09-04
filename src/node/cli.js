@@ -2,7 +2,7 @@
 import commander from 'commander'
 import color from 'cli-color'
 import api from './api'
-import boxPkg from '../package.json'
+import boxPkg from '../../package.json'
 import { exec } from 'child_process'
 
 // Get config from client the package.json file
