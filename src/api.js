@@ -5,7 +5,6 @@ console.log('process', process.cwd())
 const paths = {
   config: path.join(process.cwd(), 'node_modules/react-native-box-cli/src/temp/config.js'),
   component: path.join(process.cwd(), 'node_modules/react-native-box-cli/src/temp/component.js'),
-  previewer: path.join(__dirname, '/components/Previewer'),
 }
 
 const api = {
@@ -15,7 +14,6 @@ const api = {
       name,
       type: 'component',
     })
-    this.setComponent(paths.previewer)
   },
 
   dropInView (type, name) {
