@@ -10,9 +10,9 @@ class Previewer extends Component {
     console.log('props', props)
   }
   render () {
-    const Comp = require('../../temp/component').default
-    const presets = require('../../temp/presets').default
-    const config = require('../../temp/config').default
+    const Comp = require('../../../temp/component').default
+    const presets = require('../../../temp/presets').default
+    const config = require('../../../temp/config').default
 
     const items = Object.keys(presets).map(name => (
       <View key={name} style={styles.row}>
