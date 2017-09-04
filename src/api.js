@@ -2,8 +2,8 @@ import fs from 'fs'
 import path from 'path'
 
 const paths = {
-  config: path.join(__dirname, '/temp/config.js'),
-  component: path.join(__dirname, '/temp/component.js'),
+  config: path.join(process.cwd(), 'node_modules/react-native-box-cli/src/temp/config.js'),
+  component: path.join(__dirname, 'node_modules/react-native-box-cli/src/temp/component.js'),
   previewer: path.join(__dirname, '/components/Previewer'),
 }
 
