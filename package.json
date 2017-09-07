@@ -16,7 +16,7 @@
     "react": "^15.6.1"
   },
   "bin": {
-    "box": "src/dist/cli.js"
+    "box": "./dist/cli.js"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
