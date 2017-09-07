@@ -15,7 +15,7 @@ commander
 commander
   .command('dropin-clear')
   .alias('clear')
-  .action(api.dropIn.view);
+  .action(api.dropIn.clear);
 
 
 
