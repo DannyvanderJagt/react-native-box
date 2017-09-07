@@ -1,1 +1,1 @@
-export { default as default } from './../../../../src/styleguide/components/Badge/presets.js'
+export { default as default } from './../../../../src/styleguide/components/Button/presets.js'

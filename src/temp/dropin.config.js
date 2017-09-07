@@ -1,1 +1,1 @@
-export default {"name":"badge","type":"component"}
+export default {"name":"login","type":"view"}

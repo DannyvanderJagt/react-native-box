@@ -4,10 +4,20 @@ import output from './output'
 
 export default {
   view(name){
+    const views = config.get('views')
+
+    if(!views.routes[name]){
+      output.error(`The view ${name} isn't specified in the config.`)
+      return this
+    }
+
     fs.store('dropin.config', {
       name,
       type: 'view',
     })
+    fs.store('dropin.component', views.routes[name])
+
+    output.success(`The view ${name} has been dropped-in.`)
   },
 
   component( parsedName ){

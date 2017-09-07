@@ -1,1 +1,1 @@
-export { default as default } from './../../../../src/styleguide/components/Badge'
+export { default as default } from './../../../../src/app/general/scenes/authorisation/Login'
