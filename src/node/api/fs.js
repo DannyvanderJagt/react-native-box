@@ -3,7 +3,7 @@ import path from 'path'
 
 export default {
   getPath: name => (
-    path.join(process.cwd(), `node_modules/react-native-box-cli/src/temp/${name}.js`)
+    path.join(process.cwd(), `node_modules/react-native-box/src/temp/${name}.js`)
   ),
 
   types: {
