@@ -4,7 +4,7 @@ import api from './api'
 
 commander
   .command('dropin-component <name>')
-  .alias('dp')
+  .alias('dc')
   .action(api.dropIn.component);
 
 commander

@@ -25,7 +25,7 @@ export default {
     const components = config.get('components')
 
     if(!components.routes[name]){
-      output.error(`The component ${name} doesn\'t exists.`)
+      output.error(`The component ${name} isn't specified in the config.`)
       return
     }
 
@@ -36,6 +36,8 @@ export default {
 
     fs.store('dropin.component', components.routes[name])
     fs.store('dropin.presets', `${components.routes[name]}/presets.js`)
+
+    output.success(`The component preview ${name} has been dropped-in.`)
   },
 
   clear(){
