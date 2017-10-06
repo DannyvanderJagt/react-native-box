@@ -1,3 +1,4 @@
+import path from 'path'
 import fs from './fs'
 import config from './config'
 import output from './output'
@@ -34,8 +35,8 @@ export default {
       type: 'component',
     })
 
-    fs.store('dropin.component', components.routes[name])
-    fs.store('dropin.presets', `${components.routes[name]}/presets.js`)
+    fs.store('dropin.component', components.routes[name].index)
+    fs.store('dropin.presets', components.routes[name].presets)
 
     output.success(`The component preview ${name} has been dropped-in.`)
   },

@@ -5,19 +5,17 @@ import api from './api'
 commander
   .command('dropin-component <name>')
   .alias('dc')
-  .action(api.dropIn.component);
+  .action(api.dropIn.component)
 
 commander
   .command('dropin-view <name>')
   .alias('dv')
-  .action(api.dropIn.view);
+  .action(api.dropIn.view)
 
 commander
   .command('dropin-clear')
   .alias('clear')
-  .action(api.dropIn.clear);
-
-
+  .action(api.dropIn.clear)
 
 commander
   .parse(process.argv)

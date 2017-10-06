@@ -1,6 +1,6 @@
 {
   "name": "react-native-box",
-  "version": "0.1.6",
+  "version": "0.1.8",
   "description": "",
   "main": "src/react/index.js",
   "scripts": {
